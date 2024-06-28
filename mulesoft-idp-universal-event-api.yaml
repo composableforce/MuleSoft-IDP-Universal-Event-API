@@ -34,7 +34,6 @@ servers:
       - name: env:production
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
     bindings:
-      anypointmq:
         destination: idp
         destinationType: exchange
 
