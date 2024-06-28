@@ -20,7 +20,7 @@ info:
   contact:
     name: George Jeffcock
     url: https://blogs.mulesoft.com/dev-guides/event-driven-architecture-and-api-led-connectivity/
-    email: gjeffcock@salesfroce.com
+    email: gjeffcock@salesforce.com
 
 defaultContentType: application/json
 
@@ -50,32 +50,26 @@ servers:
         description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 channels:
-  order-placed:
-    description: new orders channel
+  mulesoft.idp.1.0.event.{actionId}:
+    parameters:
+      actionId:
+        description: The ID of the streetlight.
+        schema:
+         type: string
+    description: IDP callback occured channel
     servers:
+      - anypoint-dev
       - anypoint-prd
-    publish:
-      operationId: listen-order-placed
-      description: listen for new order events
-      summary: Order Placed Event
-      message:
-        $ref: '#/components/messages/OrderPlaced'
     subscribe:
       operationId: publish-order-placed
       description: publish new order events
+      summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+    publish:
+      operationId: listen-order-placed
+      description: listen for new order events
       summary: Order Placed Event
       message:
         $ref: '#/components/messages/OrderPlaced'
@@ -107,10 +101,10 @@ components:
                 price:
                   type: number
 
-  securitySchemes:
-    oauthProd:
-      type: oauth2
-      flows:
-        clientCredentials:
-          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
-          scopes: {}
+#  securitySchemes:
+#    oauthProd:
+#      type: oauth2
+#      flows:
+#        clientCredentials:
+#          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
+#          scopes: {}
