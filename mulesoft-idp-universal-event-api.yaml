@@ -1,5 +1,5 @@
 asyncapi: 2.6.0
-id: urn:example:com:smartylighting:streetlights:server
+id: urn:mulesoft:com:idp:myapplication
 info:
   title: MuleSoft IDP Universal 🌐 Event API
   version: 1.0.0
@@ -16,7 +16,7 @@ info:
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
-  termsOfService: https://www.salesforce.com/company/legal/sfdc-website-terms-of-service
+  termsOfService: https://asyncapi.org/terms/
   contact:
     name: George Jeffcock
     url: https://blogs.mulesoft.com/dev-guides/event-driven-architecture-and-api-led-connectivity/
