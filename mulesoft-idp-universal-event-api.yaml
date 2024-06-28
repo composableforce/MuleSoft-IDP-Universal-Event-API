@@ -33,6 +33,8 @@ servers:
     tags:
       - name: env:production
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
+    bindings:
+      
 
 #    security:                  # Ignored for MQ
 #      - oauthProd: []          # Ignored for MQ
