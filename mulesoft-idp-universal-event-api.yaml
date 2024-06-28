@@ -22,6 +22,10 @@ info:
     url: https://blogs.mulesoft.com/dev-guides/event-driven-architecture-and-api-led-connectivity/
     email: gjeffcock@salesforce.com
 
+  tags:
+    - name: idp
+      description: Operations related to IDP Processing
+
 defaultContentType: application/json
 
 servers:
@@ -90,6 +94,10 @@ channels:
       summary: Consume IDP Callback Event
       message:
         $ref: '#/components/messages/OrderPlaced'
+
+    tags:
+      - name: idp
+  
 
 components:
 
