@@ -1,6 +1,6 @@
 asyncapi: '2.6.0'
 info:
-  title: MuleSoft IDP Universal Event API
+  title: MuleSoft IDP Universal 🌐 Event API
   version: '1.0.0'
   description: MuleSoft IDP Universal Event API
 tags:
