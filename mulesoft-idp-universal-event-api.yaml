@@ -41,7 +41,7 @@ servers:
 #        bindingVersion: 0.1.0  # Ignored for MQ
 
   anypoint-dev:
-    url: 
+    url: ${anypointmq.server.anypoint-dev.url}
     description: Anypoint MQ broker DEV Env
     protocol: anypointmq
     protocolVersion: v1
