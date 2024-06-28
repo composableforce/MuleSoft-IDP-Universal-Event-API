@@ -26,7 +26,7 @@ defaultContentType: application/json
 
 servers:
   anypoint-prd:
-    url: ${anypointmq.server.anypoint-prd.clientAppId}
+    url: ${anypointmq.server.anypoint-prd.url}
     description: Anypoint MQ broker PRD Env
     protocol: anypointmq
     protocolVersion: v1
@@ -41,7 +41,7 @@ servers:
 #        bindingVersion: 0.1.0  # Ignored for MQ
 
   anypoint-dev:
-    url: https://your_MQ_server_URL_here
+    url: 
     description: Anypoint MQ broker DEV Env
     protocol: anypointmq
     protocolVersion: v1
