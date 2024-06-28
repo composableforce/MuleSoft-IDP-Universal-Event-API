@@ -18,9 +18,9 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0
   termsOfService: https://asyncapi.org/terms/
   contact:
-    name: API Support
-    url: https://www.asyncapi.org/support
-    email: support@asyncapi.org
+    name: George Jeffcock
+    url: https://www.mulesoft.org/support
+    email: gjeffcock@salesfroce.com
 
 defaultContentType: application/json
 
@@ -32,7 +32,7 @@ servers:
     protocolVersion: v1
     tags:
       - name: env:production
-        description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
+        description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
 #    security:                  # Ignored for MQ
 #      - oauthProd: []          # Ignored for MQ
@@ -46,7 +46,7 @@ servers:
     protocol: anypointmq
     protocolVersion: v1
     tags:
-      - name: env:production
+      - name: env:development
         description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
 
