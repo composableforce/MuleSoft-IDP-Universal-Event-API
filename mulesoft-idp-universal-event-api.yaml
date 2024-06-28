@@ -26,7 +26,7 @@ defaultContentType: application/json
 
 servers:
   anypoint-prd:
-    url: ${anypointmq.server.anypoint-prd.url}
+    url: anypointmq.server.anypoint-prd.url
     description: Anypoint MQ broker PRD Env
     protocol: anypointmq
     protocolVersion: v1
@@ -34,11 +34,6 @@ servers:
       - name: env:production
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
-    bindings:
-        destination: idp
-        destinationType: exchange
-
-      
 
 #    security:                  # Ignored for MQ
 #      - oauthProd: []          # Ignored for MQ
@@ -47,7 +42,7 @@ servers:
 #        bindingVersion: 0.1.0  # Ignored for MQ
 
   anypoint-dev:
-    url: ${anypointmq.server.anypoint-dev.url}
+    url: anypointmq.server.anypoint-dev.url
     description: Anypoint MQ broker DEV Env
     protocol: anypointmq
     protocolVersion: v1
@@ -75,6 +70,11 @@ channels:
       summary: Consume IDP Callback Event
       message:
         $ref: '#/components/messages/OrderPlaced'
+    bindings:
+      anypointmq:
+        destination: idp
+        destinationType: exchange
+        bindingVersion: latest
   
   mulesoft.idp.status.v1.{status}:
     parameters:
@@ -96,6 +96,11 @@ channels:
       summary: Consume IDP Callback Event
       message:
         $ref: '#/components/messages/OrderPlaced'
+    bindings:
+      anypointmq:
+        destination: idp.status
+        destinationType: fifo-queue
+        bindingVersion: latest
 
 
 components:
