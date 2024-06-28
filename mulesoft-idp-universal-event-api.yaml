@@ -5,7 +5,7 @@ info:
   description: MuleSoft IDP Universal Event API
 tags:
   - name: MuleSoft IDP Universal Event API
-    description: API for orders
+    description: MuleSoft IDP Universal Event API
 servers:
   AMQ-prod:
     url: https:://your_MQ_server_URL_here
