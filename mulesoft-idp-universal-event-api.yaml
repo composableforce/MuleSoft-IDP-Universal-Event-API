@@ -1,5 +1,5 @@
 asyncapi: 2.6.0
-id: urn:mulesoft:com:idp:myapplication
+id: urn:mulesoft:com:idp:events
 info:
   title: MuleSoft IDP Universal 🌐 Event API
   version: 1.0.0
