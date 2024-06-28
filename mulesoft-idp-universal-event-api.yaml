@@ -19,7 +19,7 @@ info:
   termsOfService: https://asyncapi.org/terms/
   contact:
     name: George Jeffcock
-    url: https://www.mulesoft.org/support
+    url: https://blogs.mulesoft.com/dev-guides/event-driven-architecture-and-api-led-connectivity/
     email: gjeffcock@salesfroce.com
 
 defaultContentType: application/json
