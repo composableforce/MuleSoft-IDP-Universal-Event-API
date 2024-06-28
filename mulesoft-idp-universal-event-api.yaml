@@ -1,22 +1,59 @@
-asyncapi: '2.6.0'
+asyncapi: 2.6.0
+id: urn:example:com:smartylighting:streetlights:server
 info:
   title: MuleSoft IDP Universal 🌐 Event API
-  version: '1.0.0'
-  description: MuleSoft IDP Universal Event API
-tags:
-  - name: MuleSoft IDP Universal Event API
-    description: MuleSoft IDP Universal Event API
+  version: 1.0.0
+  description: |-
+
+    https://v2.asyncapi.com/docs/reference/specification/v2.6.0
+
+    https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5
+
+    https://github.com/asyncapi/spec/blob/v2.6.0/spec/asyncapi.md
+
+    https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5
+
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  termsOfService: https://asyncapi.org/terms/
+  contact:
+    name: API Support
+    url: https://www.asyncapi.org/support
+    email: support@asyncapi.org
+
+defaultContentType: application/json
+
 servers:
-  AMQ-prod:
-    url: ${anypoint.mq.url}
+  anypoint-prd:
+    url: https:://your_MQ_server_URL_here
+    description: Anypoint MQ broker PRD Env
     protocol: anypointmq
     protocolVersion: v1
-    description: Anypoint MQ broker
+    tags:
+      - name: env:production
+        description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
+    security:
+      - oauthProd: []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 channels:
   order-placed:
     description: new orders channel
     servers:
-      - AMQ-prod
+      - anypoint-prd
     publish:
       operationId: listen-order-placed
       description: listen for new order events
@@ -29,6 +66,7 @@ channels:
       summary: Order Placed Event
       message:
         $ref: '#/components/messages/OrderPlaced'
+  
 
 components:
   messages:
@@ -55,29 +93,11 @@ components:
                   type: integer
                 price:
                   type: number
-    OrderConfirmed:
-      payload:
-        type: object
-        properties:
-          orderId:
-            type: string
-          email:
-            type: string
-    OrderCancelled:
-      payload:
-        type: object
-        properties:
-          orderId:
-            type: string
-          email:
-            type: string
-          reason:
-            type: string
-    BackOrder:
-      payload:
-        type: object
-        properties:
-          orderId:
-            type: string
-          email:
-            type: string
+
+  securitySchemes:
+    oauthProd:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
+          scopes: {}
