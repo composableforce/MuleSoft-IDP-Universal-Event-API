@@ -33,11 +33,21 @@ servers:
     tags:
       - name: env:production
         description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
+
 #    security:                  # Ignored for MQ
 #      - oauthProd: []          # Ignored for MQ
 #    bindings:                  # Ignored for MQ & will raise an Error in Designer
 #      anypointmq:              # Ignored for MQ
 #        bindingVersion: 0.1.0  # Ignored for MQ
+
+  anypoint-dev:
+    url: https://your_MQ_server_URL_here
+    description: Anypoint MQ broker DEV Env
+    protocol: anypointmq
+    protocolVersion: v1
+    tags:
+      - name: env:production
+        description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
 
 
