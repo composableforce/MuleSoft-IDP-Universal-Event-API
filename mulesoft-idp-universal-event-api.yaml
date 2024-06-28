@@ -2,9 +2,9 @@ asyncapi: '2.6.0'
 info:
   title: MuleSoft IDP Universal Event API
   version: '1.0.0'
-  description: Orders API
+  description: MuleSoft IDP Universal Event API
 tags:
-  - name: Orders API
+  - name: MuleSoft IDP Universal Event API
     description: API for orders
 servers:
   AMQ-prod:
@@ -12,10 +12,6 @@ servers:
     protocol: anypointmq
     protocolVersion: v1
     description: Anypoint MQ broker
-  Kafka-prod:
-    url: localhost:9092
-    protocol: kafka
-    description: kafka broker
 channels:
   order-placed:
     description: new orders channel
@@ -33,54 +29,7 @@ channels:
       summary: Order Placed Event
       message:
         $ref: '#/components/messages/OrderPlaced'
-  order-cancelled:
-    description: orders cancelled channel
-    servers:
-      - AMQ-prod
-    publish:
-      operationId: listen-order-cancellations
-      description: listen for order cancellation events
-      summary: Order Cancelled Event
-      message:
-        $ref: '#/components/messages/OrderCancelled'
-    subscribe:
-      operationId: publish-order-cancellations
-      description: publish order cancellation events
-      summary: Order Cancelled Event
-      message:
-        $ref: '#/components/messages/OrderCancelled'
-  order-confirmed:
-    description: orders confirmed channel
-    servers:
-      - AMQ-prod
-    publish:
-      operationId: listen-order-confirmations
-      description: listen for order confirmation events
-      summary: Order Confirmed Event
-      message:
-        $ref: '#/components/messages/OrderConfirmed'
-    subscribe:
-      operationId: publish-order-confirmations
-      description: publish order confirmation events
-      summary: Order Confirmed Event
-      message:
-        $ref: '#/components/messages/OrderConfirmed'
-  order-backordered:
-    servers:
-      - Kafka-prod
-    description: orders backordered channel
-    publish:
-      operationId: listen-order-backordered
-      description: listen for backorder events
-      summary: Backorder Event
-      message:
-        $ref: '#/components/messages/BackOrder'
-    subscribe:
-      operationId: publish-order-backordered
-      description: publish backorder events
-      summary: Backorder Event
-      message:
-        $ref: '#/components/messages/BackOrder'
+
 components:
   messages:
     OrderPlaced:
