@@ -8,7 +8,7 @@ tags:
     description: MuleSoft IDP Universal Event API
 servers:
   AMQ-prod:
-    url: https:://your_MQ_server_URL_here
+    url: ${anypoint.mq.url}
     protocol: anypointmq
     protocolVersion: v1
     description: Anypoint MQ broker
