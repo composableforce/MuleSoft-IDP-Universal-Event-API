@@ -54,7 +54,7 @@ servers:
 channels:
 
   mulesoft.idp.callback.v1:
-    description: MuleSoft IDP platform executed a callback on the change of status of a processing doc so channel 
+    description: MuleSoft IDP platform executed a callback on the change of status of a processing doc so channel used to process returned notifcations (callbacks) from IDP
     servers:
       - anypoint-dev
       - anypoint-prd
@@ -77,6 +77,7 @@ channels:
         bindingVersion: latest
   
   mulesoft.idp.status.v1.{status}:
+    description: MuleSoft IDP platform executed a callback on the change of status of a processing doc so channel used to process returned notifcations (callbacks) from IDP
     parameters:
       status:
         $ref: '#/components/parameters/status'
