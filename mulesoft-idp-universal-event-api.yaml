@@ -5,7 +5,7 @@ info:
   version: 1.0.0
   description: |-
 
-    ## [Execution Results Reference](https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5).
+    ## [ Anypoint-specific MQ Bindings](https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5).
 
   license:
     name: Apache 2.0
