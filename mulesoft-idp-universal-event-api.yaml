@@ -5,7 +5,6 @@ info:
   version: 1.0.0
   description: |-
 
-    https://v2.asyncapi.com/docs/reference/specification/v2.6.0
 
     https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5
 
@@ -23,7 +22,13 @@ info:
     email: gjeffcock@salesforce.com
 
 externalDocs:
-  url: 
+  description: specification/v2.6.0
+  url: https://v2.asyncapi.com/docs/reference/specification/v2.6.0
+externalDocs:
+  description: specification/v2.6.0
+  url: https://v2.asyncapi.com/docs/reference/specification/v2.6.0
+
+
 
 defaultContentType: application/json
 
