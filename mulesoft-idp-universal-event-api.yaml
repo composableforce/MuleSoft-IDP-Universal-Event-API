@@ -138,7 +138,7 @@ components:
         - `SUCCEEDED`: The execution request finished successfully.
       schema:
         type: string
-        description: lowercase and no special characters as to the channel convention
+        description: lowercase and no special characters as to channel convention
         enum:
           - failed
           - manualvalidationrequired
