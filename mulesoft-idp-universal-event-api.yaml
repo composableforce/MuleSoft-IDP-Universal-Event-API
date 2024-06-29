@@ -136,6 +136,8 @@ components:
         enum:
           - failed
           - manualvalidationrequired
+        externalDocs:
+          url: https://docs.mulesoft.com/idp/automate-document-processing-with-the-idp-api#execution-status-reference
           
   
   messages:
