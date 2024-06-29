@@ -76,7 +76,7 @@ channels:
         destinationType: exchange
         bindingVersion: latest
   
-  mulesoft.idp.status.v1.{status}:
+  mulesoft.idp.status.v1.{executionResult}:
     description: |- 
       🏢 Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to **FAILED** or **MANUAL_VALIDATION_REQUIRED**
 
@@ -93,14 +93,13 @@ channels:
       - `SUCCEEDED`: The execution request finished successfully.
 
     parameters:
-      status:
-        
-        $ref: '#/components/parameters/status'
+      executionResult:
+        $ref: '#/components/parameters/executionResult'
     servers:
       - anypoint-dev
       - anypoint-prd
     subscribe:
-      operationId: mulesoft.idp.status.v1.sub
+      operationId: mulesoft.idp.executionResult.v1.sub
       description: Produce (Send) to Channel all IDP Callback Occurences
       summary: Produce IDP Callback Event
       message:
