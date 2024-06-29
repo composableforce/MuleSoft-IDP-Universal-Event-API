@@ -56,7 +56,6 @@ servers:
       - name: env:development
         description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
-
 channels:
 
   mulesoft.idp.callback.v1:
