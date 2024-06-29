@@ -93,8 +93,8 @@ channels:
       - `SUCCEEDED`: The execution request finished successfully.
 
     parameters:
-      executionResult:
-        $ref: '#/components/parameters/callback'
+      execution-result:
+        $ref: '#/components/parameters/execution-result'
     servers:
       - anypoint-dev
       - anypoint-prd
@@ -120,8 +120,17 @@ channels:
 components:
 
   parameters:
-    status:
-      description: The ID of the streetlight.
+    execution-result:
+      description: |- 
+      ## [Execution Results Reference](https://docs.mulesoft.com/idp/automate-document-processing-with-the-idp-api#execution-status-reference).
+
+      - `ACKNOWLEDGED`: The document action execution request was received.
+      - `IN_PROGRESS`: The execution started.
+      - `RESULTS_PENDING`: The execution finished and IDP is processing the results.
+      - `MANUAL_VALIDATION_REQUIRED`: The execution finished but the results need manual validation.
+      - `FAILED`: The execution request finished unsuccessfully.
+      - `PARTIAL_SUCCESS`: The execution request finished but some sub-tasks failed.
+      - `SUCCEEDED`: The execution request finished successfully.
       schema:
         type: string
   
