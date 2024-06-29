@@ -68,7 +68,7 @@ channels:
     publish:
       operationId: mulesoft.idp.callback.v1.pub
       description: Consume all IDP callbacks Occurences
-      summary: Consume IDP Callback Event
+      summary: Consume (Recieve in 3.0 Terminology) IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
     bindings:
