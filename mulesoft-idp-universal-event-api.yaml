@@ -78,7 +78,7 @@ channels:
   
   mulesoft.idp.status.v1.{status}:
     description: |- 
-      Enterprise will be interested in knowing MuleSoft IDP platform have processed a doc request but the result stoped due to Fai
+      Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to Failure or Manual Review
     parameters:
       status:
         $ref: '#/components/parameters/status'
