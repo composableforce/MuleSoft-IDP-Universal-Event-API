@@ -80,7 +80,9 @@ channels:
     description: |- 
       🏢 Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to **FAILED** or **MANUAL_VALIDATION_REQUIRED**
 
-      🚨 BUT also more of a chance to show **parameters** in Async Apis ;) as this might actually be an anti-pattern
+      🚨 BUT also more of a chance to show **parameters** in Async Apis ;) as this might actually be an anti-pattern  
+      
+      ## [Execution Results Reference](https://docs.mulesoft.com/idp/automate-document-processing-with-the-idp-api#execution-status-reference).
 
       - `ACKNOWLEDGED`: The document action execution request was received.
       - `IN_PROGRESS`: The execution started.
@@ -92,6 +94,7 @@ channels:
 
     parameters:
       status:
+        
         $ref: '#/components/parameters/status'
     servers:
       - anypoint-dev
