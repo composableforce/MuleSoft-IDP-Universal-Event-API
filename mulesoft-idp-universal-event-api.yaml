@@ -61,14 +61,14 @@ channels:
       - anypoint-prd
     subscribe:
       operationId: mulesoft.idp.callback.v1.sub
-      description: Produce (Send) to Channel all IDP Callback Occurences
-      summary: Produce IDP Callback Event
+      description: Produce (Send in 3.0 Terminology) to Channel all IDP Callback Occurences
+      summary: Send IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
     publish:
       operationId: mulesoft.idp.callback.v1.pub
       description: Consume all IDP callbacks Occurences
-      summary: Consume (Recieve in 3.0 Terminology) IDP Callback Event
+      summary: Receive (Receive in 3.0 Terminology) IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
     bindings:
