@@ -24,9 +24,7 @@ info:
 externalDocs:
   description: specification/v2.6.0
   url: https://v2.asyncapi.com/docs/reference/specification/v2.6.0
-externalDocs:
-  description: specification/v2.6.0
-  url: https://v2.asyncapi.com/docs/reference/specification/v2.6.0
+
 
 
 
