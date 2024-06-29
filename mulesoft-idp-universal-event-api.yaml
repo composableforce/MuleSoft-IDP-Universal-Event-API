@@ -22,6 +22,9 @@ info:
     url: https://blogs.mulesoft.com/dev-guides/event-driven-architecture-and-api-led-connectivity/
     email: gjeffcock@salesforce.com
 
+externalDocs:
+  url: 
+
 defaultContentType: application/json
 
 servers:
@@ -95,7 +98,6 @@ channels:
     parameters:
       executionResult:
         $ref: '#/components/parameters/executionResult'
-      
     servers:
       - anypoint-dev
       - anypoint-prd
