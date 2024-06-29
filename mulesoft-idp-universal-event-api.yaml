@@ -21,8 +21,6 @@ externalDocs:
   url: https://v2.asyncapi.com/docs/reference/specification/v2.6.0
 
 
-
-
 defaultContentType: application/json
 
 servers:
@@ -61,13 +59,13 @@ channels:
       - anypoint-prd
     subscribe:
       operationId: mulesoft.idp.callback.send.v1
-      description: Send (in asyncapi 3.0 Terminology) to Channel all IDP Callback Occurences
+      description: Send (using asyncapi 3.0 Terminology) to Channel all IDP Callback Occurences
       summary: Send IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
     publish:
       operationId: mulesoft.idp.callback.receive.v1
-      description: Consume (Receive in asyncapi 3.0 Terminology) all IDP callbacks Occurences
+      description: Receive (using asyncapi 3.0 Terminology) all IDP callbacks Occurences
       summary: Receive IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
