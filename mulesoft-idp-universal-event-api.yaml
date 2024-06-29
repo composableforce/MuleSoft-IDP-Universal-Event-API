@@ -18,11 +18,13 @@ info:
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
+    
   termsOfService: https://asyncapi.org/terms/
+
   contact:
     name: George Jeffcock
-    url: 
-    email: gjeffcock@salesforce.com
+    url: https://www.lowcoders.com/
+    email: george@lowcoders.com
 
 externalDocs:
   description: specification/v2.6.0
