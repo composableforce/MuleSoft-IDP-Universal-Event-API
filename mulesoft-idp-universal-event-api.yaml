@@ -81,6 +81,19 @@ channels:
       🏢 Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to Failure or Manual Review
 
       🚨 BUT also more of a chance to show **parameters** in Async Apis ;) as this might actually be an anti-pattern
+
+|
+      ## [Execution Results Reference](https://docs.mulesoft.com/idp/automate-document-processing-with-the-idp-api#execution-status-reference).
+
+      When you query the results of an execution, the IDP API returns the status which can be any of the following:
+
+      - `ACKNOWLEDGED`: The document action execution request was received.
+      - `IN_PROGRESS`: The execution started.
+      - `RESULTS_PENDING`: The execution finished and IDP is processing the results.
+      - `MANUAL_VALIDATION_REQUIRED`: The execution finished but the results need manual validation.
+      - `FAILED`: The execution request finished unsuccessfully.
+      - `PARTIAL_SUCCESS`: The execution request finished but some sub-tasks failed.
+      - `SUCCEEDED`: The execution request finished successfully.
     parameters:
       status:
         $ref: '#/components/parameters/status'
