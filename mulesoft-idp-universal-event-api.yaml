@@ -94,12 +94,12 @@ channels:
 
     parameters:
       executionResult:
-        $ref: '#/components/parameters/executionResult'
+        $ref: '#/components/parameters/callback'
     servers:
       - anypoint-dev
       - anypoint-prd
     subscribe:
-      operationId: mulesoft.idp.executionResult.v1.sub
+      operationId: mulesoft.idp.execution-result.v1.sub
       description: Produce (Send) to Channel all IDP Callback Occurences
       summary: Produce IDP Callback Event
       message:
