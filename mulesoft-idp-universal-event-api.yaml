@@ -61,7 +61,7 @@ channels:
       - anypoint-prd
     subscribe:
       operationId: mulesoft.idp.callback.send.v1
-      description: Produce (Send in asyncapi 3.0 Terminology) to Channel all IDP Callback Occurences
+      description: Send (in asyncapi 3.0 Terminology) to Channel all IDP Callback Occurences
       summary: Send IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
@@ -107,8 +107,8 @@ channels:
         $ref: '#/components/messages/callback'
     publish:
       operationId: mulesoft.idp.updated.status.receive.v1
-      description: Receive all IDP callbacks Occurences
-      summary: Receive IDP Callback Event
+      description: Receive specfic IDP Status Changes
+      summary: Receive IDP Status Changes
       message:
         $ref: '#/components/messages/callback'
     bindings:
