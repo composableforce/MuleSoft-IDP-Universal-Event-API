@@ -54,7 +54,7 @@ servers:
 channels:
 
   mulesoft.idp.callback.v1:
-    description: MuleSoft IDP platform executed a callback on the change of status of a processing doc
+    description: MuleSoft IDP platform executed a callback on the change of status of a processing doc so channel 
     servers:
       - anypoint-dev
       - anypoint-prd
@@ -122,8 +122,6 @@ components:
             type: string
           email:
             type: string
-                price:
-                  type: number
 
 #  securitySchemes:
 #    oauthProd:
