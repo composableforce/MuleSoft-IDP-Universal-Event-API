@@ -77,11 +77,11 @@ channels:
         bindingVersion: latest
   
   mulesoft.idp.status.v1.{status}:
-    description: Enterprise will be interested in knowing IDP po
+    description: |- 
+      Enterprise will be interested in knowing MuleSoft IDP platform have processed a doc request but 
     parameters:
       status:
         $ref: '#/components/parameters/status'
-    description: tre
     servers:
       - anypoint-dev
       - anypoint-prd
