@@ -44,11 +44,8 @@ servers:
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
 
-#    security:                  # Ignored for MQ ACB/Studio Implmentation
-#      - oauthProd: []          # Ignored for MQ
-#    bindings:                  # Ignored for MQ & will raise an Error in Designer
-#      anypointmq:              # Ignored for MQ
-#        bindingVersion: 0.1.0  # Ignored for MQ
+#    security:                  # Ignored for MQ ACB/Studio Implementation
+#      - oauthProd: []          # Ignored for MQ ACB/Studio Implementation
 
   anypoint-dev:
     url: anypointmq.server.anypoint-dev.url
@@ -159,9 +156,9 @@ components:
           email:
             type: string
 
-#  securitySchemes:
-#    oauthProd:
-#      type: oauth2
+#  securitySchemes:        ACB/Studio Implementation
+#    oauthProd:            ACB/Studio Implementation
+#      type: oauth2        ACB/Studio Implementation
 #      flows:
 #        clientCredentials:
 #          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
