@@ -76,7 +76,7 @@ channels:
         destinationType: exchange
         bindingVersion: latest
   
-  mulesoft.idp.status.v1.{executionResult}:
+  mulesoft.idp.updated.{executionResult}.v1:
     description: |- 
       🏢 Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to **FAILED** or **MANUAL_VALIDATION_REQUIRED**
 
