@@ -100,13 +100,13 @@ channels:
       - anypoint-dev
       - anypoint-prd
     subscribe:
-      operationId: mulesoft.idp.execution-result-send.v1
-      description: Send to Channel all IDP Callback Occurences
-      summary: Send IDP Callback Event
+      operationId: mulesoft.idp.updated.status.send.v1
+      description: Send to Channel specfic IDP Status Changes
+      summary: Send IDP Status Changes
       message:
         $ref: '#/components/messages/callback'
     publish:
-      operationId: mulesoft.idp.status.receive.v1
+      operationId: mulesoft.idp.updated.status.receive.v1
       description: Receive all IDP callbacks Occurences
       summary: Receive IDP Callback Event
       message:
