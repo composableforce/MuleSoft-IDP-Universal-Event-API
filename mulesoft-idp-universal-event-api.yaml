@@ -135,7 +135,7 @@ components:
         type: string
         enum:
           - failed
-          - manualVALIDATION_REQUIRED
+          - manualvalidationrequired
           
   
   messages:
