@@ -78,11 +78,9 @@ channels:
   
   mulesoft.idp.status.v1.{status}:
     description: |- 
-      🏢 Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to Failure or Manual Review
+      🏢 Enterprise will be interested in knowing MuleSoft IDP platform has processed a doc request but the result stopped due to **FAILED** or **MANUAL_VALIDATION_REQUIRED**
 
       🚨 BUT also more of a chance to show **parameters** in Async Apis ;) as this might actually be an anti-pattern
-|
-        When you query the results of an execution, the IDP API returns the status which can be any of the following:
 
       - `ACKNOWLEDGED`: The document action execution request was received.
       - `IN_PROGRESS`: The execution started.
