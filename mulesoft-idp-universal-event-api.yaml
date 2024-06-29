@@ -101,7 +101,7 @@ channels:
       - anypoint-prd
     subscribe:
       operationId: mulesoft.idp.execution-result-send.v1
-      description: Produce (Send) to Channel all IDP Callback Occurences
+      description: Send to Channel all IDP Callback Occurences
       summary: Send IDP Callback Event
       message:
         $ref: '#/components/messages/callback'
