@@ -93,8 +93,8 @@ channels:
       - `SUCCEEDED`: The execution request finished successfully.
 
     parameters:
-      execution-result:
-        $ref: '#/components/parameters/execution-result'
+      executionResult:
+        $ref: '#/components/parameters/executionResult'
     servers:
       - anypoint-dev
       - anypoint-prd
@@ -120,7 +120,7 @@ channels:
 components:
 
   parameters:
-    execution-result:
+    executionResult:
       description: |- 
         ## [Execution Results Reference](https://docs.mulesoft.com/idp/automate-document-processing-with-the-idp-api#execution-status-reference).
 
@@ -134,7 +134,7 @@ components:
       schema:
         type: string
         enum:
-          - FAILED
+          - failed
           - MANUAL_VALIDATION_REQUIRED
           
   
