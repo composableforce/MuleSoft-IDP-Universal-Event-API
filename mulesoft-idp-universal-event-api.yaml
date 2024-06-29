@@ -19,7 +19,7 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
 
-  termsOfService: https://www.UseAtYourOwnRisk.org
+  termsOfService: https://www.UseAtYourOwnRisk.com
 
   contact:
     name: George Jeffcock
@@ -44,7 +44,7 @@ servers:
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
 
-#    security:                  # Ignored for MQ
+#    security:                  # Ignored for MQ ACB/Studio Implmentation
 #      - oauthProd: []          # Ignored for MQ
 #    bindings:                  # Ignored for MQ & will raise an Error in Designer
 #      anypointmq:              # Ignored for MQ
