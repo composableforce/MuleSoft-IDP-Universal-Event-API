@@ -77,7 +77,7 @@ channels:
         bindingVersion: latest
   
   mulesoft.idp.status.v1.{status}:
-    description: MuleSoft IDP platform executed a callback on the change of status of a processing doc so channel used to process returned notifcations (callbacks) from IDP
+    description: Enterprise will be interested in knowing IDP po
     parameters:
       status:
         $ref: '#/components/parameters/status'
