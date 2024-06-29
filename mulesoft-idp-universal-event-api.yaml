@@ -63,13 +63,13 @@ channels:
       description: Produce (Send) to Channel all IDP Callback Occurences
       summary: Produce IDP Callback Event
       message:
-        $ref: '#/components/messages/OrderPlaced'
+        $ref: '#/components/messages/callback'
     publish:
       operationId: mulesoft.idp.callback.v1.pub
       description: Consume all IDP callbacks Occurences
       summary: Consume IDP Callback Event
       message:
-        $ref: '#/components/messages/OrderPlaced'
+        $ref: '#/components/messages/callback'
     bindings:
       anypointmq:
         destination: idp
@@ -80,7 +80,7 @@ channels:
     parameters:
       status:
         $ref: '#/components/parameters/status'
-    description: IDP callback Channel
+    description: tre
     servers:
       - anypoint-dev
       - anypoint-prd
@@ -89,13 +89,13 @@ channels:
       description: Produce (Send) to Channel all IDP Callback Occurences
       summary: Produce IDP Callback Event
       message:
-        $ref: '#/components/messages/OrderPlaced'
+        $ref: '#/components/messages/callback'
     publish:
       operationId: mulesoft.idp.status.v1.pub
       description: Consume all IDP callbacks Occurences
       summary: Consume IDP Callback Event
       message:
-        $ref: '#/components/messages/OrderPlaced'
+        $ref: '#/components/messages/callback'
     bindings:
       anypointmq:
         destination: idp.status
@@ -112,7 +112,7 @@ components:
         type: string
   
   messages:
-    OrderPlaced:
+    callback:
       payload:
         type: object
         properties:
@@ -122,17 +122,6 @@ components:
             type: string
           email:
             type: string
-          items:
-            type: array
-            items:
-              type: object
-              properties:
-                productId:
-                  type: string
-                productName:
-                  type: string
-                quantity:
-                  type: integer
                 price:
                   type: number
 
