@@ -31,7 +31,6 @@ externalDocs:
   description: specification/v2.6.0
   url: https://v2.asyncapi.com/docs/reference/specification/v2.6.0
 
-
 defaultContentType: application/json
 
 servers:
@@ -57,7 +56,6 @@ servers:
 #      - oauthProd: []          # Ignored for MQ ACB/Studio Implementation
 
 channels:
-
   mulesoft.idp.callback.v1:
     description: MuleSoft IDP platform executed a callback on the change of status of a processing doc so channel used to process returned notifcations (callbacks) from IDP
     servers:
