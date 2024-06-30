@@ -177,6 +177,20 @@ components:
                 type: string
           bindingVersion: latest
 
+  messageTraits:
+    commonHeaders:
+      headers:
+        type: object
+        properties:
+          correlationId:
+            description: Correlation ID set by application
+            type: string
+        correlationId:
+          description: >-
+            Correlation ID is specified as a header and transmitted in the
+            Anypoint MQ message properties section
+          location: $message.header#/correlationId
+
 #  securitySchemes:        ACB/Studio Implementation
 #    oauthProd:            ACB/Studio Implementation
 #      type: oauth2        ACB/Studio Implementation
