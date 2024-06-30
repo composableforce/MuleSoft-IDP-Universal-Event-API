@@ -43,10 +43,6 @@ servers:
       - name: env:production
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
 
-
-#    security:                  # Ignored for MQ ACB/Studio Implementation
-#      - oauthProd: []          # Ignored for MQ ACB/Studio Implementation
-
   anypoint-dev:
     url: anypointmq.server.anypoint-dev.url
     description: Anypoint MQ broker DEV Env
@@ -55,6 +51,9 @@ servers:
     tags:
       - name: env:development
         description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
+
+#    security:                  # Ignored for MQ ACB/Studio Implementation
+#      - oauthProd: []          # Ignored for MQ ACB/Studio Implementation
 
 channels:
 
