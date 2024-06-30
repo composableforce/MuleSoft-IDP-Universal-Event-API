@@ -147,15 +147,47 @@ components:
   
   messages:
     callback:
-      payload:
-        type: object
-        properties:
-          orderId:
-            type: string
-          customerName:
-            type: string
-          email:
-            type: string
+      headers:
+          type: object
+          properties:
+            correlationId:
+              description: Correlation ID set by application
+              type: string
+          correlationId:
+            description: Correlation ID is specified as a header and transmitted in the Anypoint MQ message properties section
+            location:    $message.header#/correlationId
+        payload:
+          type: object
+          properties:
+            executionId:
+              description: Unique Job Identifer from MuleSoft IDP 
+              type: string
+              format: uuid
+            actionId:
+              description: ActionId of IDP action that produced this callback
+              type: string
+              format: uuid
+            actionVersion:
+              description: Version of IDP action that produced this callback
+              type: string
+            msc:
+              description: optional - key of a record like case id or email id
+              type: string
+          required:
+            - executionId
+            - actionId
+            - actionVersion
+          additionalProperties: false
+        bindings:
+          anypointmq:
+            headers:
+              type: object
+              properties:
+                messageId:
+                  type: string
+                messageGroupId:
+                  type: string
+            bindingVersion: latest
 
 #  securitySchemes:        ACB/Studio Implementation
 #    oauthProd:            ACB/Studio Implementation
