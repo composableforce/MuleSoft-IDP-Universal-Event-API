@@ -42,6 +42,9 @@ servers:
     tags:
       - name: env:production
         description: Anypoint MQ broker for production, in the US East (N. Virginia) runtime plane under management of the US control plane.
+    security:
+      - anypoint-oauth-prd: []
+    
 
   anypoint-dev:
     url: anypointmq.server.anypoint-dev.url
@@ -51,9 +54,8 @@ servers:
     tags:
       - name: env:development
         description: Anypoint MQ broker for development, in the US East (N. Virginia) runtime plane under management of the US control plane.
-
-#    security:                  # Ignored for MQ ACB/Studio Implementation
-#      - oauthProd: []          # Ignored for MQ ACB/Studio Implementation
+    security:
+      - anypoint-oauth-dev: []
 
 channels:
   mulesoft.idp.callback.v1:
@@ -143,9 +145,11 @@ components:
           - failed
           - manualvalidationrequired
           
-  
   messages:
+    
     idpSubmissionKeys:
+      traits:
+        - $ref: '#/components/messageTraits/commonHeaders'
       payload:
         type: object
         properties:
@@ -185,16 +189,23 @@ components:
           correlationId:
             description: Correlation ID set by application
             type: string
+            example: fty9a52d-e069-4441-83c6-8d779c937dd9
         correlationId:
           description: >-
             Correlation ID is specified as a header and transmitted in the
             Anypoint MQ message properties section
           location: $message.header#/correlationId
 
-#  securitySchemes:        ACB/Studio Implementation
-#    oauthProd:            ACB/Studio Implementation
-#      type: oauth2        ACB/Studio Implementation
-#      flows:              ACB/Studio Implementation
-#        clientCredentials:
-#          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
-#          scopes: {}
+  securitySchemes:
+    anypoint-oauth-prd:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
+          scopes: {}
+    anypoint-oauth-dev:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://mq-us-east-2.anypoint.mulesoft.com/api/v1/authorize'
+          scopes: {}
