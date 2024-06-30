@@ -168,14 +168,14 @@ components:
           - actionId
           - actionVersion
         additionalProperties: false
-    bindings:
-      anypointmq:
-        headers:
+        bindings:
+          anypointmq:
+            headers:
               type: object
               properties:
                 messageId:
                   type: string
-            bindingVersion: '0.1.0'
+            bindingVersion: 0.1.0
 
 #  securitySchemes:        ACB/Studio Implementation
 #    oauthProd:            ACB/Studio Implementation
