@@ -76,7 +76,7 @@ channels:
         $ref: '#/components/messages/idpSubmissionKeys'
     bindings:
       anypointmq:
-        destination: mulesoft.idp.callback.v1
+        destination: idp
         destinationType: queue
         bindingVersion: latest
 
