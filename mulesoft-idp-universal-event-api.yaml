@@ -11,7 +11,12 @@ info:
       - MuleSoft IDP Universal 🌐 Process App ⚙️
       - MuleSoft IDP Universal 🌐 Event API
 
-    [ asyncapi Anypoint-specific MQ Bindings](https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5).
+    
+    https://github.com/asyncapi/bindings/tree/master/anypointmq
+    
+    [ Asyncapi Anypoint-specific MQ Bindings](https://github.com/asyncapi/bindings/blob/1a62858ef52dd968f4d5018245ea9b4ff411666f/anypointmq/README.md?plain=1#L5).
+
+    
 
     [ MuleSoft Blog - Event-Driven Architecture and API-Led Connectivity](https://blogs.mulesoft.com/dev-guides/event-driven-architecture-and-api-led-connectivity).
 
