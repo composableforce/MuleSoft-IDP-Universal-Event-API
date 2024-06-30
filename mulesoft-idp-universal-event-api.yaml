@@ -77,8 +77,10 @@ channels:
     bindings:
       anypointmq:
         destination: mulesoft.idp.callback.v1
-        destinationType: q
+        destinationType: queue
         bindingVersion: latest
+
+
   
   mulesoft.idp.updated.status.{executionResult}.v1:
     description: |- 
