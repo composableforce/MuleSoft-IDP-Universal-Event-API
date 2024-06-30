@@ -154,26 +154,26 @@ components:
             description: Unique Job Identifer from MuleSoft IDP 
             type: string
             format: uuid
-            actionId:
-              description: ActionId of IDP action that produced this callback
-              type: string
-              format: uuid
-            actionVersion:
-              description: Version of IDP action that produced this callback
-              type: string
-            msc:
-              description: optional - key of a record like case id or email id
-              type: string
-          required:
-            - executionId
-            - actionId
-            - actionVersion
-          additionalProperties: false
+          actionId:
+            description: ActionId of IDP action that produced this callback
+            type: string
+            format: uuid
+          actionVersion:
+            description: Version of IDP action that produced this callback
+            type: string
+          msc:
+            description: optional - key of a record like case id or email id
+            type: string
+        required:
+          - executionId
+          - actionId
+          - actionVersion
+        additionalProperties: false
 
 #  securitySchemes:        ACB/Studio Implementation
 #    oauthProd:            ACB/Studio Implementation
 #      type: oauth2        ACB/Studio Implementation
-#      flows:
+#      flows:              ACB/Studio Implementation
 #        clientCredentials:
 #          tokenUrl: 'https://mq-us-east-1.anypoint.mulesoft.com/api/v1/authorize'
 #          scopes: {}
