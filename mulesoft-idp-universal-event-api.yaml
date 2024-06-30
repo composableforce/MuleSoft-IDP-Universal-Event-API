@@ -119,7 +119,7 @@ channels:
         $ref: '#/components/messages/idpSubmissionKeys'
     bindings:
       anypointmq:
-        destination: idp.status
+#       destination: idp.status  No point as a parameter field makes it dynamic
         destinationType: fifo-queue
         bindingVersion: latest
 
