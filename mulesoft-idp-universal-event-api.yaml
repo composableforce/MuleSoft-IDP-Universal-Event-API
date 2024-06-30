@@ -76,8 +76,8 @@ channels:
         $ref: '#/components/messages/callback'
     bindings:
       anypointmq:
-        destination: idp
-        destinationType: exchange
+        destination: mulesoft.idp.callback.v1
+        destinationType: q
         bindingVersion: latest
   
   mulesoft.idp.updated.status.{executionResult}.v1:
